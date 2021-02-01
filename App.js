@@ -54,8 +54,8 @@ const styles = StyleSheet.create({
   }, 
   operations: {
     flex: 2,
-    flexDirection: 'column', 
-    justifyContent:'center', 
+    flexDirection: 'row', 
     alignContent: 'stretch', 
+   
   }, 
 });

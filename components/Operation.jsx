@@ -7,7 +7,7 @@ export default function OperationBtn(props) {
             {
               props.data.map((column) => (
                 <TouchableHighlight key={column} style={styles.operationsItem}>
-                  <Text>{column}</Text>
+                  <Text style={styles.operationText}>{column}</Text>
                 </TouchableHighlight>
               ))
             }
@@ -16,21 +16,22 @@ export default function OperationBtn(props) {
 }
 
 const styles = StyleSheet.create({
-    operationsItem: {
-        height: '17%',
-        width: '80%',
-        backgroundColor: 'yellow', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        borderRadius: '50%', 
-        margin: 5, 
-        color: 'black'
-    }, 
-    operationsColumn: {
-        flex: 1, 
-        flexDirection: 'column', 
-        alignContent: 'stretch', 
-        alignItems: 'center', 
-        justifyContent: 'center',
-    }, 
+  operationsColumn: {
+    justifyContent: 'space-between',
+    alignContent: 'stretch',
+    marginBottom: 90
+  }, 
+  operationsItem: {
+    height: 80,
+    width: 80,
+    backgroundColor: 'yellow', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    borderRadius: 70, 
+    marginTop: 6
+  },
+  operationText: {
+    fontSize: 27,
+    fontWeight: 'bold'
+  } 
 })

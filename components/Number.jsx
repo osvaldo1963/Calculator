@@ -24,14 +24,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     row: {
-        flexBasis: '25%', 
-        height: '60%', 
+        flexBasis: 80, 
+        height: 80, 
         backgroundColor:'gray', 
         alignItems:'center',
         justifyContent: 'center', 
-        borderRadius: "50%", 
-        margin: 10
-      },
+        borderRadius: 45, 
+        margin: 6
+    },
     rowText: {
         fontSize: 27, 
         fontWeight: 'bold', 
