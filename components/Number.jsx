@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
 export default function NumberBtn(props) {
@@ -6,8 +6,11 @@ export default function NumberBtn(props) {
         <View style={styles.numberRow}>
             {
                 props.data.map((row) => (
-                    <TouchableHighlight key={row} style={styles.row}>
-                        <Text style={styles.rowText}>{row}</Text>
+                    <TouchableHighlight 
+                        onPress={() => props.btnClick(row)} 
+                        key={row} 
+                        style={styles.row}>
+                        <Text style={styles.rowText}>{ row}</Text>
                     </TouchableHighlight>
                 ))
             }
@@ -22,15 +25,16 @@ const styles = StyleSheet.create({
         flexWrap: 'wrap',
         alignItems: 'center', 
         justifyContent: 'center',
+        marginBottom: 40,        
     },
     row: {
-        flexBasis: 80, 
-        height: 80, 
-        backgroundColor:'gray', 
+        flexBasis: 70, 
+        height: 70, 
         alignItems:'center',
         justifyContent: 'center', 
-        borderRadius: 45, 
-        margin: 6
+        borderRadius: 35, 
+        margin: 6, 
+        backgroundColor: 'gray'
     },
     rowText: {
         fontSize: 27, 
